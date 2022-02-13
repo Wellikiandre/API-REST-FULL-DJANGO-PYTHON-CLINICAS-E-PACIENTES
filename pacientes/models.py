@@ -10,11 +10,9 @@ class Pacientes(models.Model):
     num_endereco = models.IntegerField(blank=True, null=True)
     bairro = models.CharField(max_length=60,blank=True, null=True)
     cep = models.IntegerField(blank=True, null=True)
-    data_cadastro = models.models.DateTimeField(auto_now_add=True)
+    data_cadastro = models.DateTimeField(auto_now_add=True)
     cpf_cnpj = models.IntegerField(blank=True, null=True)
 
     class Meta:
-        #pode ser gerenciada ?
         managed = True
-        #nome da tabela
         db_table = 'pacientes'
