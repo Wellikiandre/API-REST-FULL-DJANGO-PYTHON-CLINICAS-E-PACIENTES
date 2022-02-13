@@ -11,7 +11,7 @@ class Pacientes(models.Model):
     bairro = models.CharField(max_length=60,blank=True, null=True)
     cep = models.IntegerField(blank=True, null=True)
     data_cadastro = models.DateTimeField(auto_now_add=True)
-    cpf_cnpj = models.IntegerField(blank=True, null=True)
+    cpf_cnpj = models.IntegerField(blank=False, null=False)
 
     class Meta:
         managed = True

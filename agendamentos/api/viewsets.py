@@ -1,4 +1,3 @@
-from html5lib import serialize
 from rest_framework import viewsets
 from agendamentos.models import Agendamentos
 from agendamentos.api.serializers import AgendamentosSerializers
