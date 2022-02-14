@@ -15,16 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from agendamentos.api.viewsets import AgendamentoViewSet
 
 from rest_framework import routers
 
+from historicos.api.viewsets import HistoricosViewSet
 from pacientes.api.viewsets import PacientesViewSet
 from agendamentos.api.viewsets import AgendamentoViewSet
 
 router = routers.DefaultRouter()
 router.register(r'pacientes',PacientesViewSet)
 router.register(r'agendamentos',AgendamentoViewSet)
+router.register(r'historicos',HistoricosViewSet)
 
 
 urlpatterns = [
